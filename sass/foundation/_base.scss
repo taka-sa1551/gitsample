@@ -1,0 +1,44 @@
+// Foundation base //
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* font */
+body {
+  font-family: "M PLUS 1p", sans-serif;
+}
+/* color */
+body {
+  color: #3c2a10;
+}
+
+$font-robot: "Roboto", sans-serif;
+$font-mplus: "M PLUS 1p", sans-serif;
+
+/* color */
+$color-gray: #707070;
+$color-white: #fff;
+$color-brown: #3c2b1c;
+
+$bgcolor-header: #fff7ef;
+$bgcolor-sub: #f2ede9;
+$bgcolor-sub_btn: #DED8D3;
+$bgcolor-main: #fffdfa;
+$bgcolor-footer: #9d8670;
+
+
+/* responsive */
+$breakpoint: (
+  sp: 'screen and (max-width: 375px)',
+  spover: 'screen and (min-width: 376px)',
+  tab: 'screen and (max-width: 835px)',
+  pc: 'screen and (min-width: 836px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}

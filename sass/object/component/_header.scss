@@ -1,0 +1,66 @@
+@use '../../foundation/base' as *;
+
+/*フォーム全体*/
+#c-form1{
+  position:absolute;/*フォームの絶対位置*/	
+  left:0;
+  top:0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;	
+  
+  @include mq(tab) { //tab以下表示位置をずらす
+    left: 35px;
+    margin-top: 56px;
+  }
+}
+/*検索欄のボックス*/
+#c-form1__sbox1{
+  outline:0;/*クリック時の青い枠線消す*/	
+  height:46px;/*検索ボックスの高さ*/	
+  @include mq(sp) { //spは欄を小さく
+    width: 230px; /*検索ボックスの幅*/
+  }	
+  @include mq(tab) {
+    width: 396px;
+  }	
+  @include mq(pc) { 
+    width: 396px;
+  }	
+  padding:0 10px;
+  border-radius:10px;/*検索ボックスの角を丸める*/		
+  border-color: $color-gray; //#707070;
+  background:#fff;/*検索ボックスの背景カラー*/	
+
+}
+/*検索ボタン*/
+#c-form1__sbtn1{
+  margin-left:10px; //検索欄との間をあける
+
+  @include mq(sp) {
+    width: 78px; /*検索ボタンの横幅*/
+    height:46px; /*検索ボタンの縦幅*/ 
+    // left: 242px; /*検索ボタンの位置調整*/  
+  }	
+  @include mq(tab) {
+    width:136px;
+    height:46px;
+    // left:409px;
+  }	
+  @include mq(pc) { 
+    width:136px;
+    height:46px;
+    // left:409px;
+  }	
+  
+  border-radius:10px;/*検索ボタンの角を丸める*/ 
+  background: linear-gradient($bgcolor-sub, $bgcolor-sub_btn); //#f2ede9(上),#DED8D3(下) ★★線形グラデーション下から上に薄く　/*検索ボタンの背景カラー*/ 
+  border-color: $color-gray; //#707070;
+  color: $color-gray;/*検索ボタンのテキストカラー*/ 
+  font-weight:bold;/*検索ボタンのテキスト太字*/ 
+  font-size:16px;/*検索ボタンのフォントサイズ*/ 
+}
+/*検索ボタンマウスオーバー時*/
+#sbtn:hover{
+  color: $color-gray; //#707070 /*検索ボタンマウスオーバー時のフォントカラー*/ 
+}
