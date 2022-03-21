@@ -1,0 +1,183 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* font */
+body {
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+/* color */
+body {
+  color: #3c2a10;
+}
+
+/* color */
+/* responsive */
+.l-header {
+  height: 217px;
+  background-color: #fff7ef;
+}
+@media screen and (max-width: 375px) {
+  .l-header {
+    display: block;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 835px) {
+  .l-header {
+    display: block;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 836px) {
+  .l-header {
+    padding: 65px 31px 65px 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.l-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.l-column__main, .column__nav {
+  width: 100%;
+}
+
+@media screen and (min-width: 836px) {
+  .l-column__main {
+    width: 80%;
+  }
+
+  .l-column__nav {
+    width: 20%;
+  }
+}
+/*フォーム全体*/
+#c-form1 {
+  position: absolute;
+  /*フォームの絶対位置*/
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 835px) {
+  #c-form1 {
+    left: 35px;
+    margin-top: 56px;
+  }
+}
+
+/*検索欄のボックス*/
+#c-form1__sbox1 {
+  outline: 0;
+  /*クリック時の青い枠線消す*/
+  height: 46px;
+  /*検索ボックスの高さ*/
+  padding: 0 10px;
+  border-radius: 10px;
+  /*検索ボックスの角を丸める*/
+  border-color: #707070;
+  background: #fff;
+  /*検索ボックスの背景カラー*/
+}
+@media screen and (max-width: 375px) {
+  #c-form1__sbox1 {
+    width: 230px;
+    /*検索ボックスの幅*/
+  }
+}
+@media screen and (max-width: 835px) {
+  #c-form1__sbox1 {
+    width: 396px;
+  }
+}
+@media screen and (min-width: 836px) {
+  #c-form1__sbox1 {
+    width: 396px;
+  }
+}
+
+/*検索ボタン*/
+#c-form1__sbtn1 {
+  margin-left: 10px;
+  border-radius: 10px;
+  /*検索ボタンの角を丸める*/
+  background: linear-gradient(#f2ede9, #DED8D3);
+  border-color: #707070;
+  color: #707070;
+  /*検索ボタンのテキストカラー*/
+  font-weight: bold;
+  /*検索ボタンのテキスト太字*/
+  font-size: 16px;
+  /*検索ボタンのフォントサイズ*/
+}
+@media screen and (max-width: 375px) {
+  #c-form1__sbtn1 {
+    width: 78px;
+    /*検索ボタンの横幅*/
+    height: 46px;
+    /*検索ボタンの縦幅*/
+  }
+}
+@media screen and (max-width: 835px) {
+  #c-form1__sbtn1 {
+    width: 136px;
+    height: 46px;
+  }
+}
+@media screen and (min-width: 836px) {
+  #c-form1__sbtn1 {
+    width: 136px;
+    height: 46px;
+  }
+}
+
+/*検索ボタンマウスオーバー時*/
+#sbtn:hover {
+  color: #707070;
+}
+
+.p-header__logo > h1 {
+  color: #707070;
+  font-weight: bold;
+  font-size: 40px;
+}
+@media screen and (max-width: 835px) {
+  .p-header__logo > h1 {
+    width: 203px;
+    height: 53px;
+    margin: 0 auto;
+    padding-top: 38px;
+  }
+}
+@media screen and (min-width: 836px) {
+  .p-header__logo > h1 {
+    width: 325px;
+    height: 84px;
+  }
+}
+
+.p-header__serch {
+  position: relative;
+  /*フォームの相対位置*/
+  height: 46px;
+  max-width: 545px;
+}
+@media screen and (max-width: 375px) {
+  .p-header__serch {
+    max-width: 320px;
+    /*フォームのサイズ*/
+  }
+}
+/*# sourceMappingURL=styles.css.map */
