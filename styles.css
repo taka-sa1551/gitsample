@@ -1,4 +1,81 @@
 @charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +93,26 @@ body {
 
 /* color */
 /* responsive */
+.l-grid {
+  display: grid;
+}
+@media screen and (max-width: 375px) {
+  .l-grid {
+    height: 100vh;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 376px) {
+  .l-grid {
+    grid-template-columns: 1fr 367px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+    grid-template-areas: "head menubtn" "main navigatison" "map navigatison" "footer footer";
+  }
+}
+
 .l-header {
+  grid-area: head;
   height: 217px;
   background-color: #fff7ef;
 }
@@ -37,30 +133,37 @@ body {
 @media screen and (min-width: 836px) {
   .l-header {
     padding: 65px 31px 65px 67px;
+    /* IE11とIE10対応 */
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 
-.l-container {
-  display: flex;
-  flex-wrap: wrap;
+.l-side {
+  background-color: #f2ede9;
 }
 
-.l-column__main, .column__nav {
+.l-side__menubtn {
+  grid-area: menubtn;
+  height: 217px;
+}
+
+.l-side__nav {
+  grid-area: navitgation;
+  width: 367px;
+  background-color: #f2ede9;
+}
+
+.l-main {
+  grid-area: main;
+  align-content: start;
+}
+
+.l-main__img {
   width: 100%;
 }
 
-@media screen and (min-width: 836px) {
-  .l-column__main {
-    width: 80%;
-  }
-
-  .l-column__nav {
-    width: 20%;
-  }
-}
 /*フォーム全体*/
 #c-form1 {
   position: absolute;
@@ -179,5 +282,52 @@ body {
     max-width: 320px;
     /*フォームのサイズ*/
   }
+}
+
+/* 画像の高さを固定し横幅だけ伸縮 */
+@media screen and (max-width: 375px) {
+  .p-main__img__pc {
+    display: none;
+  }
+
+  .p-main__img__sp {
+    display: block;
+    width: 100%;
+    height: 285px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 835px) {
+  .p-main__img__pc {
+    display: block;
+    width: 100%;
+    height: 285px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .p-main__img__sp {
+    display: none;
+  }
+}
+@media screen and (min-width: 836px) {
+  .p-main__img__pc {
+    display: block;
+    width: 100%;
+    height: 530px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .p-main__img__sp {
+    display: none;
+  }
+}
+.p-side__menubtn {
+  font-family: Roboto;
+  color: #707070;
+  font-weight: bold;
+  line-height: 1.4;
 }
 /*# sourceMappingURL=styles.css.map */

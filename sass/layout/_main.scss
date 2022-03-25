@@ -1,0 +1,11 @@
+@use '../foundation/base' as *;
+@use '../foundation/grid' as *;
+
+.l-main {
+  // display: block;
+  grid-area: main;
+  align-content: start;
+}
+.l-main__img {
+  width: 100%;
+}

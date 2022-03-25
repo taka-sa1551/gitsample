@@ -1,0 +1,18 @@
+@use '../foundation/base' as *;
+@use '../foundation/grid' as *;
+
+
+.l-side {
+  background-color: $bgcolor-sub;
+}
+.l-side__menubtn {
+  grid-area: menubtn;
+  height: 217px;
+}
+
+
+.l-side__nav {
+  grid-area: navitgation;
+  width: 367px;
+  background-color: $bgcolor-sub;
+}

@@ -1,0 +1,11 @@
+@use '../../foundation/base' as *;
+@use '../../foundation/grid' as *;
+
+.p-side__menubtn {
+  font-family: Roboto;
+  color: $color-gray;
+  font-weight: bold;
+  line-height: 1.4;
+  // font-size: 34px;
+  // line-height: 45px;
+}

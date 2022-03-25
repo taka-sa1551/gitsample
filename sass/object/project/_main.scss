@@ -1,0 +1,30 @@
+@use '../../foundation/base' as *;
+
+/* 画像の高さを固定し横幅だけ伸縮 */
+@include mq(sp) { 
+  .p-main__img__pc { display: none; }
+  .p-main__img__sp {
+    display: block; 
+    width: 100%;
+    height: 285px;
+    object-fit: cover; 
+  }
+}
+@include mq(tab) { 
+  .p-main__img__pc {
+    display: block; 
+    width: 100%;
+    height: 285px;
+    object-fit: cover; 
+  }
+  .p-main__img__sp { display: none; }
+}
+@include mq(pc) { 
+  .p-main__img__pc {
+    display: block; 
+    width: 100%;
+    height: 530px;
+    object-fit: cover; 
+  }
+  .p-main__img__sp { display: none; }
+}

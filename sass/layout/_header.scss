@@ -1,7 +1,11 @@
 @use '../foundation/base' as *;
-// @use '../foundation/mixin' as *;
+@use '../foundation/grid' as *;
 
 .l-header {
+  grid-area: head;
+  height: 217px;
+  background-color: $bgcolor-header;
+
   @include mq(sp) {
     display: block;
     padding-bottom: 10px;
@@ -15,30 +19,10 @@
   } 
   @include mq(pc) {
     padding: 65px 31px 65px 67px;
+    display: -ms-flexbox;/* IE11とIE10対応 */
     display: flex;
     justify-content: space-between;
     align-items: center;
     // width: 1553px;
   } 
-  
-  height: 217px;
-  background-color: $bgcolor-header;
-}
-
-//----------------- コンテナ（サイドバー含む）
-.l-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.l-column__main, .column__nav {
-  width: 100%;
-}
-@include mq(pc) {
-  .l-column__main {
-    width: 80%;
-  }
-  .l-column__nav {
-    width: 20%;
-  }
 }

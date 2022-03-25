@@ -1,0 +1,21 @@
+@use '../foundation/base' as *;
+
+.l-grid {
+  display: grid;
+  @include mq(sp) {
+    height: 100vh;
+    // grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+  }
+  @include mq(spover) {
+    grid-template-columns: 1fr 367px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+    grid-template-areas:
+      "head menubtn"
+      "main navigatison"
+      "map navigatison"
+      "footer footer";
+  }
+  // align-content: start;
+}
