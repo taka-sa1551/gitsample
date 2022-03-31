@@ -1,0 +1,35 @@
+/* バツ印 */
+@use '../../foundation/base' as *;
+
+@include mq(tab) {
+  .c-batsu {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    top: -25px; 
+    right: -159px;
+  }
+   
+  .c-batsu::before, .c-batsu::after { /* 共通設定 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px; /* 棒の幅（太さ） */
+    height: 32px; /* 棒の高さ */
+    background: $color-gray;
+  }
+   
+  .c-batsu::before {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+   
+  .c-batsu::after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+}
+
+// @include mq(pc) {
+//   display: none;
+// }

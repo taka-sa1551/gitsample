@@ -11,11 +11,14 @@
 //       $('sub_menu_ul').slideUp(200);
 //   });
 // });
-
+//サイドバーnav項目読込
+$(function(){
+  $('.l-header').load("common/header.html");
+});
 
 //サイドバーnav項目読込
 $(function(){
-  $('.l-side__nav').load("side.html");
+  $('.l-side').load("common/side.html");
 });
 
 // $(function() {

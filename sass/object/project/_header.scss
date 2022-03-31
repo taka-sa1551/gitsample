@@ -1,3 +1,4 @@
+// project header
 @use '../../foundation/base' as *;
 
 .p-header__logo > h1 {
@@ -6,23 +7,56 @@
     width: 203px;
     height: 53px;
     margin: 0 auto; //ブロック要素中央寄せ
-    padding-top: 38px; //上余白
+    font-size: 40px;
+    margin-top: 38px; //上余白
+    // padding-top: 38px; //上余白
   }
 
   @include mq(pc) {
     width: 325px;
     height: 84px;
+    font-size: 64px;
   }
   color: $color-gray;  //#707070
   font-weight: bold;
-  font-size: 40px;
+  
 }
 
 .p-header__serch {
-  position:relative;/*フォームの相対位置*/
+  // position:relative;/*フォームの相対位置*/
   height: 46px;	
   max-width:545px;
   @include mq(sp) { 
     max-width: 320px; /*フォームのサイズ*/
   }	
 }
+
+.p-header__link_h3 {
+  position: absolute;
+  text-decoration: none;
+
+  @include mq(sp) {
+    width: 51px;
+    height: 26px;
+    right: 16px;
+    top: 14px;
+  } 
+  @include mq(tab) {
+    width: 86px;
+    height: 45px;
+    right: 26px;
+    top: 18px;
+  } 
+  
+  @include mq(pc) {
+    display: none; //Menu none
+  } 
+  &_a {
+    text-decoration: none;
+    a:link, a:visited, a:hover, a:active {
+      color: $color-gray;
+      cursor: pointer;
+    }
+  }
+}
+

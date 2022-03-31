@@ -2,10 +2,43 @@
 @use '../foundation/grid' as *;
 
 .l-main {
-  // display: block;
-  grid-area: main;
+  grid-row: 2;
+  grid-column: 1;
+
   align-content: start;
 }
 .l-main__img {
-  width: 100%;
+  grid-row: 1;  //mainの中に更にgrid
+  grid-column: 2;
+}
+
+//----------------------
+// .l-main__glid{
+//   display: grid;
+//   grid-template-columns: 2 1fr;
+//   grid-template-rows: 3 1fr;
+// }
+
+// .l-main__left {
+//   grid-row: 2;
+//   grid-column: 1;
+// }
+// .l-main__right {
+//   grid-row: 2;
+//   grid-column: 2;
+// }
+// .l-main__map {
+//   grid-row: 3;
+//   grid-column: 1 / 2;
+// }
+.l-main-visual {
+  display: flex;
+  height: auto;
+  padding: 40px;
+  position: relative;
+  @include mq(sp) {
+    display: block;
+    padding: 20px 20px 49px 20px;
+  }
+  // z-index: 20;
 }

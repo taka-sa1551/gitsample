@@ -2,20 +2,9 @@
 
 .l-grid {
   display: grid;
-  @include mq(sp) {
-    height: 100vh;
-    // grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-  }
-  @include mq(spover) {
-    grid-template-columns: 1fr 367px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 0px;
-    grid-template-areas:
-      "head menubtn"
-      "main navigatison"
-      "map navigatison"
-      "footer footer";
-  }
-  // align-content: start;
+  // grid-template-columns: 2 1fr;
+  grid-template-columns: 1 367px 1fr;
+  grid-template-rows: 217px 1fr 150px;
+  min-height: 100vh;
+  grid-gap: 0px;
 }

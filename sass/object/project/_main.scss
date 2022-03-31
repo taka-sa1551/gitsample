@@ -1,30 +1,136 @@
+// project main
 @use '../../foundation/base' as *;
 
+.p-main__kv {
+  position: relative;
+}
+
+.p-main__kvtext {
+  position: absolute;
+  font-family: $font-mplus;
+  font-weight: bold;
+  color: $color-white;
+
+  @include mq(sp) {
+    font-size: 36px;
+    line-height: 54px;
+    top: 334px;
+    left: 25px;
+  }
+  @include mq(tab) {
+    font-size: 36px;
+    line-height: 54px;
+    top: 334px;
+    left: 86px;
+  }
+  @include mq(pc) {
+    font-size: 40px;
+    line-height: 60px;
+    top: 448px;
+    left: 86px;
+  }
+}
+
+
 /* 画像の高さを固定し横幅だけ伸縮 */
-@include mq(sp) { 
-  .p-main__img__pc { display: none; }
-  .p-main__img__sp {
+.p-main__kvimg__pc {
+  @include mq(sp) {
+    display: none;  
+  }
+  @include mq(tab) {
     display: block; 
     width: 100%;
     height: 285px;
     object-fit: cover; 
   }
-}
-@include mq(tab) { 
-  .p-main__img__pc {
-    display: block; 
-    width: 100%;
-    height: 285px;
-    object-fit: cover; 
-  }
-  .p-main__img__sp { display: none; }
-}
-@include mq(pc) { 
-  .p-main__img__pc {
+  @include mq(pc) { 
     display: block; 
     width: 100%;
     height: 530px;
     object-fit: cover; 
   }
-  .p-main__img__sp { display: none; }
 }
+
+.p-main__kvimg__sp {
+  @include mq(sp) {
+    display: block; 
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+  }
+  @include mq(tab) {
+    display: none; 
+  }
+  @include mq(pc) {
+    display: none; 
+  }
+}
+
+.p-main-visual {
+  &__left {
+    background-image: url(../../../images/frontpage-img/left_w356_h681.jpg) no-repeat center/cover;
+    width: calc(50% - 40px / 2);
+    height: 1193px;
+    margin-right: 80px;
+    position:relative;
+    object-fit: cover;
+    @include mq(tab) {
+      height: 681px;
+      margin-right: 40px;
+    }
+    @include mq(sp) {
+      width: 100%;
+      height: 642px;
+      margin-right: 0;
+    }
+  } 
+  &__right {
+    background-image: url(../../../images/frontpage-img/right_w356_h681.jpg)  no-repeat center/cover;
+    width: calc(50% - 40px / 2);
+    height: 1193px;
+    position:relative;
+    object-fit: cover;
+    @include mq(tab) {
+      height: 681px;
+    }
+    @include mq(sp) {
+      width: 100%;
+      height: 642px;
+      margin-top: 20px;
+    }
+  }
+}
+.l-main-visual {
+  h3,a {
+    position: relative;
+    font-family: $font-robot;                     
+    color: #fff;
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: (106/80);
+    top: 20px;
+    left: 20px;
+    @include mq(tab) {
+      font-size: 4.4rem;
+      font-weight: bold;
+      line-height: (58/44);
+      top: 7px;
+      left: 5px;
+    }
+  }
+  h3::before {
+    background-color: #fff;
+    position: absolute;
+    top: 160.5px;
+    left: 26.5px;
+    content: "";
+    width: 63px;
+    height: 4px;
+    @include mq(tab) {
+      width: 35px;
+      top: 82px;
+      left: 7px;
+    }
+  }
+}
+

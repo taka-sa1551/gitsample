@@ -3,16 +3,53 @@
 
 
 .l-side {
+  grid-row: 1 / span 2;
+  grid-column: 2;
   background-color: $bgcolor-sub;
-}
-.l-side__menubtn {
-  grid-area: menubtn;
-  height: 217px;
+  display: position;
+  padding-left: 46px;
+  padding-top: 82px;
+  color: $color-gray;
 }
 
+.l-side__menulink {
+  display: absolute;
+  font-family: $font-mplus;
+  
+  
+  @include mq(sp) {
+    top: 14px;
+    left: 67px;
+    width: 51px;
+    height: 26px;
+  }
+
+  @include mq(tab) {
+    top: 82px;
+    right: 56px;
+    width: 86px;
+    height: 45px;
+  }
+  
+  @include mq(pc) {
+    top: 82px;
+    right: 66px;
+    width: 86px;
+    height: 45px;
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 45px;
+  }
+  & > a {
+    text-decoration: none;
+    // a:link, a:visited, a:hover, a:active {
+    //   color: $color-gray;
+    //   cursor: pointer;
+    // }
+  }
+}
 
 .l-side__nav {
-  grid-area: navitgation;
-  width: 367px;
+  margin-top: 85px;
   background-color: $bgcolor-sub;
 }

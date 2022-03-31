@@ -42,3 +42,9 @@ $breakpoint: (
     @content;
   }
 }
+
+// a
+a:link, a:visited, a:hover, a:active {
+  color: $color-gray;
+  cursor: pointer;
+}

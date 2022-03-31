@@ -1,11 +1,32 @@
-@use '../../foundation/base' as *;
-@use '../../foundation/grid' as *;
+// project side
 
-.p-side__menubtn {
-  font-family: Roboto;
+@use '../../foundation/base' as *;
+
+
+.p-side__h2 {
+  font-family: $font-robot;
   color: $color-gray;
   font-weight: bold;
   line-height: 1.4;
-  // font-size: 34px;
-  // line-height: 45px;
+  & > a {
+    text-decoration: none;
+  }  
+}
+
+
+.p-side__h3 {
+  font-family: $font-mplus;
+  font-size: bold;
+  font-size: 24px;
+  margin-top: 23px;
+}
+.p-side__ul {
+  list-style: none;
+}
+
+
+.p-side__li {
+  font-family: $font-mplus;
+  font-size: 20px;
+  padding: 20px 0 0 23px; // liとliの間を調整
 }

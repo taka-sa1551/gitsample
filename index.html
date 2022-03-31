@@ -9,8 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet"> -->
-  <!-- <script src="https//code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
   <!--jQueryの読み込みの後に、以下のコードを追加 -->
@@ -24,49 +23,49 @@
 </head>
 <body>
   <div class="l-grid">
-    <header class="l-header">
-      <div class="p-header__logo">
-        <h1 class="js-resize-text">Hamburger</h1>
-      </div>
-      <div class="p-header__serch">
-        <form id="c-form1" action="/" method="get">
-          <input id="c-form1__sbox1" id="s" name="s" type="text" placeholder="キーワードを入力">
-          <input id="c-form1__sbtn1" type="submit" name="submit" value="検索">
-        </form>
-      </div>
-    </header>
+    <header class="l-header"></header>
     <main class="l-main">
-      <div id="l-main__img p-main__img">
-        <img class="p-main__img__pc" src="images/mainvisual-img/mainvisual-pc.jpg" alt="パソコン用の画像front-pageダミーサイト">
-        <img class="p-main__img__sp" src="images/mainvisual-img/mainvisual-sp.jpg" alt="スマートフォン用の画像front-pageダミーサイト">
+      <div id="l-main__img p-main__kv">
+        <img class="p-main__kvimg__pc" src="images/mainvisual-img/mainvisual-pc.jpg" alt="パソコン用の画像front-pageダミーサイト">
+        <img class="p-main__kvimg__sp" src="images/mainvisual-img/mainvisual-sp.jpg" alt="スマートフォン用の画像front-pageダミーサイト">
+        <p class="p-main__kvtext">ダミーサイト</p>
       </div>
+
+      <div class="l-main-visual">
+        <div class="p-main-visual__left">
+          <h3><a href="#">Take Out</a></h3>
+          <div class="p-panel">
+            <div class="p-panel-box">
+              <h4>Take OUT</h4>
+              <p>当店のテイクアウトで利用できる商品を掲載しています</p>
+            </div>
+            <div class="p-panel-box">
+              <h4>Take OUT</h4>
+              <p>当店のテイクアウトで利用できる商品を掲載しています</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-main-visual__right">
+          <h3><a href="#">Eat In</a></h3>
+          <div class="p-panel">
+            <div class="p-panel-box">
+              <h4>Eat In</h4>
+              <p>当店のイートインで利用できる商品を掲載しています</p>
+            </div>
+            <div class="p-panel-box">
+              <h4>Eat In</h4>
+              <p>当店のイートインで利用できる商品を掲載しています</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="l-main__map">
+        </div>
+
     </main>
-    <aside class="l-side">
-      <nav>
-        <div class="l-side__menubtn p-side__menubtn">
-          <h2><a href="/">Menu</a></h2> 
-        </div>
-        <div class="l-side__nav">
-          <!-- <?php
-            include("side.php");
-          ?> -->
-        </div>
-      </nav>
-      
-      
-    </aside>
+    <aside class="l-side"></aside>
     <footer id="footer">
     </footer>
   </div>
-<!-- <script>
-//共通パーツ読み込み
-$(function () {
-  // $.ajaxSetup({cache:false});
-$("#header").load("header.html");
-$("#side").load("side.html");
-$("#footer").load("footer.html");
-});
-</script>
-   -->
 </body>
 </html>
