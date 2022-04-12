@@ -68,7 +68,7 @@
 
 .p-main-visual {
   &__left {
-    background-image: url(../../../images/frontpage-img/left_w356_h681.jpg) no-repeat center/cover;
+    background: url("../images/frontpage-img/left_w356_h681.jpg") no-repeat center/cover;
     width: calc(50% - 40px / 2);
     height: 1193px;
     margin-right: 80px;
@@ -85,7 +85,7 @@
     }
   } 
   &__right {
-    background-image: url(../../../images/frontpage-img/right_w356_h681.jpg)  no-repeat center/cover;
+    background: url("../images/frontpage-img/right_w356_h681.jpg") no-repeat center/cover;
     width: calc(50% - 40px / 2);
     height: 1193px;
     position:relative;
@@ -105,20 +105,22 @@
     position: relative;
     font-family: $font-robot;                     
     color: #fff;
-    font-size: 8rem;
+    font-size: 80px;
     font-weight: bold;
-    line-height: (106/80);
+    line-height: 106px;
     top: 20px;
     left: 20px;
+    text-decoration: none;
     @include mq(tab) {
-      font-size: 4.4rem;
+      font-size: 44px;
       font-weight: bold;
-      line-height: (58/44);
-      top: 7px;
-      left: 5px;
+      line-height: 58px;
+      top: 12px;
+      left: 11px;
     }
   }
   h3::before {
+    //横棒
     background-color: #fff;
     position: absolute;
     top: 160.5px;
@@ -127,10 +129,54 @@
     width: 63px;
     height: 4px;
     @include mq(tab) {
-      width: 35px;
+      width: 35.94px;
       top: 82px;
       left: 7px;
     }
   }
 }
 
+.p-main-visual{
+  .p-panel {
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    @include mq(tab) {
+      right: 10px;
+      left: 10px;
+      bottom: 10px;
+    }
+    &-box {
+      // background-color: #fff;
+      background-color:rgba(255, 255, 255, 0.911);
+      background-blend-mode:lighten;
+      min-height: 174px;
+      padding: 17px 17px 17px 19px;
+      @include mq(tab) {
+        padding: 20px 10px;
+      }
+      &:nth-of-type(2) {
+        margin-top: 30px;
+        @include mq(tab) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 36px;
+  }
+  p {
+    margin-top: 26px;
+    font-size: 16px;
+    line-height: 23px;
+    @include mq(tab) {
+      margin-top: 20px;
+    }
+  }
+}

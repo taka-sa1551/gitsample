@@ -7,27 +7,4 @@
   position: relative;
   height: 217px;
   background-color: $bgcolor-header;
-
-  @include mq(sp) {
-    display: block;
-    padding-bottom: 10px;
-    width: 100%;
-  } 
-
-  @include mq(tab) {
-    display: block;
-    padding-bottom: 10px;
-    width: 100%;
-  } 
-
-  @include mq(pc) {
-    padding: 65px 31px 65px 67px;
-    display:-webkit-box;
-    display:-ms-flexbox; /* IE11とIE10対応 */
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    align-items: center;
-  } 
 }

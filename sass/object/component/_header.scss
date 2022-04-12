@@ -1,68 +1,51 @@
 @use '../../foundation/base' as *;
 
-/*フォーム全体*/
-#c-form1{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
+.c-header__display {
   @include mq(sp) { 
-    width: 320px;
-    height: 46px;
-    margin-top: 38px;
+    // 縦並び
+    display: block;
+    padding-bottom: 10px;
+    width: 100%;
+    align-items: center;
   }
-  
   @include mq(tab) { 
-    width: 545px;
-    height: 46px;
-    margin-top: 38px;
+    // 縦並び
+    display: block;
+    padding-bottom: 10px;
+    width: 100%;
+    align-items: center;
   }
-
   @include mq(pc) { 
-    width: 545px;
-    height: 46px;
+    // 左右横並び
+    display: flex;
+    flex-wrap: no-wrap;  //折り返さない
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 31px 65px 67px;
   }
 }
-/*検索欄*/
-#c-form1__sbox1{
-  outline:0;/*クリック時の青い枠線消す*/	
-  height:46px;/*検索ボックスの高さ*/	
-  @include mq(sp) { //spは欄を小さく
-    width: 230px; /*検索ボックスの幅*/
-  }	
-  @include mq(spover) {
-    width: 396px;
-  }	
-  padding:0 10px;
-  border-radius:10px;/*検索ボックスの角を丸める*/		
-  border-color: $color-gray; //#707070;
-  border-width: thin;
-  background:#fff;/*検索ボックスの背景カラー*/	
-}
-/*検索ボタン*/
-#c-form1__sbtn1{
-  margin-left:10px; //検索欄との間をあける
 
-  @include mq(sp) {
-    width: 78px; /*検索ボタンの横幅*/
-    height:46px; /*検索ボタンの縦幅*/ 
-    // left: 242px; /*検索ボタンの位置調整*/  
-  }	
-  @include mq(spover) {
-    width:136px;
-    height:46px;
-    // left:409px;
-  }	
-  
-  border-radius:10px;/*検索ボタンの角を丸める*/ 
-  background: linear-gradient($bgcolor-sub, $bgcolor-sub_btn); //#f2ede9(上),#DED8D3(下) ★★線形グラデーション下から上に薄く　/*検索ボタンの背景カラー*/ 
-  border-color: $color-gray; //#707070;
-  border-width: thin;
-  color: $color-gray;/*検索ボタンのテキストカラー*/ 
-  font-weight: bold;/*検索ボタンのテキスト太字*/ 
-  font-size: 16px;/*検索ボタンのフォントサイズ*/ 
-}
-/*検索ボタンマウスオーバー時*/
-#sbtn:hover{
-  color: $color-gray; //#707070 /*検索ボタンマウスオーバー時のフォントカラー*/ 
+
+.c-logo__h1 {
+  margin-top: 5px;
+  color: $color-gray;  //#707070
+  font-weight: bold;
+
+  @include mq(tab) {
+    width: 203px;
+    height: 53px;
+    margin: 0 auto; //ブロック要素中央寄せ
+    font-size: 40px;
+    margin-top: 38px; //上余白
+  }
+  @include mq(pc) {
+    width: 325px;
+    height: 84px;
+    font-size: 64px;
+  }
+
+  & a {
+    text-decoration: none;
+  }
 }

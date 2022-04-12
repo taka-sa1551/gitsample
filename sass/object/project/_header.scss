@@ -1,36 +1,91 @@
 // project header
 @use '../../foundation/base' as *;
 
-.p-header__logo > h1 {
-   @include mq(tab) {
-    //tab以下
-    width: 203px;
-    height: 53px;
-    margin: 0 auto; //ブロック要素中央寄せ
-    font-size: 40px;
-    margin-top: 38px; //上余白
-    // padding-top: 38px; //上余白
+/* 検索フォームの全体幅 */
+.p-search-form {
+  display: flex; 
+  @include mq(sp) { //spは欄を小さく
+    max-width: 320px; 
+    margin-top: 10px;
+    padding-bottom: 40px;
+  }	
+  @include mq(tab) {
+    max-width: 546px;
+    margin-top: 10px;
+    padding-bottom: 40px;
   }
-
   @include mq(pc) {
-    width: 325px;
-    height: 84px;
-    font-size: 64px;
+    max-width: 546px;
+    margin-top: 10px;
+    padding-bottom: 10px;
   }
-  color: $color-gray;  //#707070
-  font-weight: bold;
-  
 }
 
-.p-header__serch {
-  // position:relative;/*フォームの相対位置*/
-  height: 46px;	
-  max-width:545px;
-  @include mq(sp) { 
-    max-width: 320px; /*フォームのサイズ*/
+/* 虫眼鏡 */
+.p-search-form__label {
+  display: inline-block; 
+  position: relative;    //基準
+}
+
+.p-search-form__label::before {
+  content: "";           /* 疑似要素に必須 */
+  width: 24px;           /* アイコンの横幅 */
+  height: 24px;          /* アイコンの高さ */
+  background: url(../img/serchglass.png) no-repeat center center ; /* 背景にアイコン画像を配置 */
+  display: inline-block; /* 高さを持たせるためにインラインブロック要素にする */
+  position: absolute;    /* 相対位置に指定 */
+  top: 12px;              /* アイコンの位置 */
+  left: 13px;             /* アイコンの位置 */
+}
+
+/* 検索キーワード入力欄 */
+.p-search-form__keyword {
+  padding: 4px 10px 3px 40px; /* アイコンを設置するため左の余白を多めに指定 */
+  height: 46px;
+  border: 1px solid $color-gray;
+  border-radius: 10px;
+  border-width: thin;
+  outline:0;/*クリック時の太枠線を枠線消す*/	
+  @include mq(sp) { //spは欄を小さく
+    width: 230px; /*検索ボックスの幅*/
+  }	
+  @include mq(spover) {
+    width: 396px;
   }	
 }
 
+/* 検索ボタン */
+.p-search-form__submit {
+  background-color: $bgcolor-sub;
+  font-size: 16px;
+  margin-left: 10px;
+  height: 46px; /*検索ボタンの縦幅*/ 
+  border: 1px solid $color-gray;
+  border-radius: 10px;
+
+  @include mq(sp) {
+    width: 78px; /*検索ボタンの横幅*/ 
+  }	
+  @include mq(spover) {
+    width: 136px;
+  }	
+  
+  border-radius:10px;/*検索ボタンの角を丸める*/ 
+  background: linear-gradient($bgcolor-sub, $bgcolor-sub_btn); //#f2ede9(上),#DED8D3(下) ★★線形グラデーション下から上に薄く　/*検索ボタンの背景カラー*/ 
+  border-color: $color-gray; //#707070;
+  border-width: thin;
+  color: $color-gray;/*検索ボタンのテキストカラー*/ 
+  font-weight: bold;/*検索ボタンのテキスト太字*/ 
+  font-size: 16px;/*検索ボタンのフォントサイズ*/ 
+}
+/*検索ボタンマウスオーバー時*/
+.p-search-form__submit:hover{
+  color: $color-gray; //#707070 /*検索ボタンマウスオーバー時のフォントカラー*/ 
+  cursor: pointer;
+}
+
+
+/* menuリンク */
 .p-header__link_h3 {
   position: absolute;
   text-decoration: none;
@@ -51,12 +106,10 @@
   @include mq(pc) {
     display: none; //Menu none
   } 
-  &_a {
-    text-decoration: none;
-    a:link, a:visited, a:hover, a:active {
+  & a, a:link, a:visited, a:hover, a:active {
+      text-decoration: none;
       color: $color-gray;
       cursor: pointer;
-    }
   }
 }
 
