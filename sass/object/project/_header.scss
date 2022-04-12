@@ -106,10 +106,8 @@
   @include mq(pc) {
     display: none; //Menu none
   } 
-  & a, a:link, a:visited, a:hover, a:active {
+  & a {
       text-decoration: none;
-      color: $color-gray;
-      cursor: pointer;
   }
 }
 

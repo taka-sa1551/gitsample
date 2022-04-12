@@ -7,4 +7,27 @@
   position: relative;
   height: 217px;
   background-color: $bgcolor-header;
+
+  @include mq(sp) { 
+    // 縦並び
+    display: block;
+    padding-bottom: 10px;
+    width: 100%;
+    align-items: center;
+  }
+  @include mq(tab) { 
+    // 縦並び
+    display: block;
+    padding-bottom: 10px;
+    width: 100%;
+    align-items: center;
+  }
+  @include mq(pc) { 
+    // 左右横並び
+    display: flex;
+    flex-wrap: no-wrap;  //折り返さない
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 31px 65px 67px;
+  }
 }
